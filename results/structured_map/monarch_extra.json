@@ -1,0 +1,82 @@
+[
+ {
+  "m": 2,
+  "n": 4,
+  "k": 3,
+  "params": 48,
+  "jac_rank_mod_p": 16,
+  "predicted": 16,
+  "dense": 16,
+  "match": true
+ },
+ {
+  "m": 3,
+  "n": 9,
+  "k": 4,
+  "params": 216,
+  "jac_rank_mod_p": 81,
+  "predicted": 81,
+  "dense": 81,
+  "match": true
+ },
+ {
+  "m": 5,
+  "n": 25,
+  "k": 3,
+  "params": 750,
+  "jac_rank_mod_p": 425,
+  "predicted": 425,
+  "dense": 625,
+  "match": true
+ },
+ {
+  "m": 5,
+  "n": 25,
+  "k": 5,
+  "params": 1250,
+  "jac_rank_mod_p": 625,
+  "predicted": 625,
+  "dense": 625,
+  "match": true
+ },
+ {
+  "m": 6,
+  "n": 36,
+  "k": 1,
+  "params": 432,
+  "jac_rank_mod_p": 396,
+  "predicted": 396,
+  "dense": 1296,
+  "match": true
+ },
+ {
+  "m": 6,
+  "n": 36,
+  "k": 2,
+  "params": 864,
+  "jac_rank_mod_p": 576,
+  "predicted": 576,
+  "dense": 1296,
+  "match": true
+ },
+ {
+  "m": 6,
+  "n": 36,
+  "k": 5,
+  "params": 2160,
+  "jac_rank_mod_p": 1116,
+  "predicted": 1116,
+  "dense": 1296,
+  "match": true
+ },
+ {
+  "m": 6,
+  "n": 36,
+  "k": 6,
+  "params": 2592,
+  "jac_rank_mod_p": 1296,
+  "predicted": 1296,
+  "dense": 1296,
+  "match": true
+ }
+]

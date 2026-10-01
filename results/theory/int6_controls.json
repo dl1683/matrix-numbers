@@ -1,0 +1,28 @@
+{
+ "INT5_f11_q1_functionals": 72,
+ "INT5_examples": [
+  [
+   1,
+   -7
+  ],
+  [
+   1,
+   -6
+  ],
+  [
+   1,
+   -5
+  ],
+  [
+   1,
+   -4
+  ],
+  [
+   1,
+   -3
+  ]
+ ],
+ "INT6_rows": 29,
+ "INT6_K31_functionals_all_codes_all_q": 0,
+ "INT6_K10_fast_vs_brute_mismatches": 0
+}

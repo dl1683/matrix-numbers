@@ -1,0 +1,143 @@
+{
+ "drift_positive_control": {
+  "valid": 0,
+  "invalid": 6,
+  "ok": true
+ },
+ "drift_negative_control": {
+  "valid": 3,
+  "invalid": 0,
+  "ok": true,
+  "edge_4.9pct_valid": true
+ },
+ "decision_controls": {
+  "win_nonoverlap": {
+   "H1a": true,
+   "expected": true,
+   "ok": true,
+   "rho_med": 0.592
+  },
+  "tie": {
+   "H1a": false,
+   "expected": false,
+   "ok": true,
+   "rho_med": 0.95
+  },
+  "slower": {
+   "H1a": false,
+   "expected": false,
+   "ok": true,
+   "rho_med": 1.185
+  },
+  "rho_0.85_but_iqr_overlap": {
+   "H1a": false,
+   "rho_med": 0.85,
+   "overlap": true,
+   "ok": true
+  },
+  "H1b_true": {
+   "H1b": true,
+   "expected": true,
+   "ok": true
+  },
+  "H1b_false_slow_own": {
+   "H1b": false,
+   "expected": false,
+   "ok": true
+  },
+  "H1b_false_vendor_not_fallback": {
+   "H1b": false,
+   "expected": false,
+   "ok": true
+  },
+  "H1b_false_unmatched_own": {
+   "H1b": false,
+   "expected": false,
+   "ok": true
+  },
+  "H1b_absent_on_G": {
+   "has_H1b": false,
+   "ok": true
+  },
+  "unmatched_own_blocks_H1a": {
+   "H1a": false,
+   "ok": true
+  }
+ },
+ "bracket_controls": {
+  "paired_in_bracket": true,
+  "unpaired_across_brackets": true,
+  "H1b_uses_Vd_from_other_bracket": true
+ },
+ "match_controls": {
+  "native_vs_itself_matched": true,
+  "fp32_rounded_not_matched": true,
+  "perturbed_entry_not_matched": true,
+  "perturbed_entry_E1": 1.4430402092382933e-11,
+  "fp32_E1": 2.712309058977542e-08,
+  "native_E1": 7.177315075897977e-16
+ },
+ "vendor_knob_controls": {
+  "b40_less_accurate_than_b64": true,
+  "emulation_faster_than_native": true,
+  "native13_close_to_torch_native": true,
+  "detail": {
+   "fix_b40": {
+    "status": 0,
+    "err": {
+     "E1": 8.30406294547207e-14,
+     "E2": 1.483790355159914e-14
+    },
+    "t_med": 0.002378623962402344
+   },
+   "fix_b64": {
+    "status": 0,
+    "err": {
+     "E1": 1.1820730171490491e-16,
+     "E2": 2.2049714434615588e-17
+    },
+    "t_med": 0.004455264091491699
+   },
+   "dyn_ws": {
+    "status": 0,
+    "err": {
+     "E1": 1.1820730171490491e-16,
+     "E2": 2.2049714434615588e-17
+    },
+    "t_med": 0.0038310720920562745
+   },
+   "native13": {
+    "status": 0,
+    "err": {
+     "E1": 1.536694922293764e-15,
+     "E2": 2.8289572513831813e-16
+    },
+    "t_med": 0.025173055648803712
+   },
+   "torch_native_t_med": 0.025177663803100585
+  }
+ },
+ "fallback_flag_controls": {
+  "normal_not_fallback": true,
+  "nan_is_fallback": true
+ },
+ "audit_controls": {
+  "violations_true_bound": 0,
+  "violations_bound_x0.01": 1345
+ },
+ "timed_scope_controls": {
+  "host_gap_delta_s": 0.050588096618652344,
+  "gpu_sleep_delta_s": 0.02097478342056274,
+  "ok": true
+ },
+ "vendor_bits_controls": {
+  "bits_G": 62,
+  "bits_S": 91,
+  "ok": true
+ },
+ "vstar_native_control": {
+  "vstar": "native",
+  "ok": true
+ },
+ "all_ok": true
+}

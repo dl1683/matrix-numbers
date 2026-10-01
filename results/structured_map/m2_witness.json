@@ -1,0 +1,62 @@
+{
+ "mod_p": [
+  {
+   "m": 2,
+   "params": 24,
+   "jac_rank_mod_p": 16,
+   "predicted": 16,
+   "kernel": 8,
+   "gauge": 8,
+   "match": true
+  },
+  {
+   "m": 3,
+   "params": 81,
+   "jac_rank_mod_p": 63,
+   "predicted": 63,
+   "kernel": 18,
+   "gauge": 18,
+   "match": true
+  },
+  {
+   "m": 4,
+   "params": 192,
+   "jac_rank_mod_p": 160,
+   "predicted": 160,
+   "kernel": 32,
+   "gauge": 32,
+   "match": true
+  },
+  {
+   "m": 5,
+   "params": 375,
+   "jac_rank_mod_p": 325,
+   "predicted": 325,
+   "kernel": 50,
+   "gauge": 50,
+   "match": true
+  }
+ ],
+ "exact_Q": [
+  {
+   "m": 2,
+   "params": 24,
+   "rank_over_Q": 16,
+   "predicted": 16,
+   "kernel": 8,
+   "gauge": 8,
+   "match": true,
+   "witness_slice_form_ok": true
+  },
+  {
+   "m": 3,
+   "params": 81,
+   "rank_over_Q": 63,
+   "predicted": 63,
+   "kernel": 18,
+   "gauge": 18,
+   "match": true,
+   "witness_slice_form_ok": true
+  }
+ ]
+}

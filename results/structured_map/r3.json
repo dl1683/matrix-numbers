@@ -1,0 +1,282 @@
+{
+ "helper_controls": {
+  "rank_fwd": 17,
+  "rank_full": 17,
+  "expected_rank": 17,
+  "zero_matrix_rank": 0,
+  "permrows_equals_Pi_mul": true,
+  "match": true
+ },
+ "kron_reorder": [
+  {
+   "m1": 2,
+   "m2": 2,
+   "m": 4,
+   "sampler_in_Mon": true,
+   "q_is_permutation": true,
+   "reordered_kron_in_Mon": true,
+   "NEG_plain_lexicographic_kron_in_Mon": false,
+   "Q_Pi1xPi2_Qt_equals_Pi": true,
+   "dao_class_kron_reordered_PiTimes_in_Mon": true,
+   "NEG_random_dense_in_Mon": false,
+   "match": true
+  },
+  {
+   "m1": 2,
+   "m2": 3,
+   "m": 6,
+   "sampler_in_Mon": true,
+   "q_is_permutation": true,
+   "reordered_kron_in_Mon": true,
+   "NEG_plain_lexicographic_kron_in_Mon": false,
+   "Q_Pi1xPi2_Qt_equals_Pi": true,
+   "dao_class_kron_reordered_PiTimes_in_Mon": true,
+   "NEG_random_dense_in_Mon": false,
+   "match": true
+  },
+  {
+   "m1": 3,
+   "m2": 2,
+   "m": 6,
+   "sampler_in_Mon": true,
+   "q_is_permutation": true,
+   "reordered_kron_in_Mon": true,
+   "NEG_plain_lexicographic_kron_in_Mon": false,
+   "Q_Pi1xPi2_Qt_equals_Pi": true,
+   "dao_class_kron_reordered_PiTimes_in_Mon": true,
+   "NEG_random_dense_in_Mon": false,
+   "match": true
+  },
+  {
+   "m1": 3,
+   "m2": 3,
+   "m": 9,
+   "sampler_in_Mon": true,
+   "q_is_permutation": true,
+   "reordered_kron_in_Mon": true,
+   "NEG_plain_lexicographic_kron_in_Mon": false,
+   "Q_Pi1xPi2_Qt_equals_Pi": true,
+   "dao_class_kron_reordered_PiTimes_in_Mon": true,
+   "NEG_random_dense_in_Mon": false,
+   "match": true
+  }
+ ],
+ "monotone": [
+  {
+   "m": 2,
+   "k": 1,
+   "pis_before": 1,
+   "pis_after": 2,
+   "latin_reproduces_X": true,
+   "NEG_wrong_shift_reproduces_X": false,
+   "match": true
+  },
+  {
+   "m": 2,
+   "k": 2,
+   "pis_before": 2,
+   "pis_after": 3,
+   "latin_reproduces_X": true,
+   "NEG_wrong_shift_reproduces_X": false,
+   "match": true
+  },
+  {
+   "m": 2,
+   "k": 3,
+   "pis_before": 3,
+   "pis_after": 4,
+   "latin_reproduces_X": true,
+   "NEG_wrong_shift_reproduces_X": false,
+   "match": true
+  },
+  {
+   "m": 3,
+   "k": 1,
+   "pis_before": 1,
+   "pis_after": 2,
+   "latin_reproduces_X": true,
+   "NEG_wrong_shift_reproduces_X": false,
+   "match": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "pis_before": 2,
+   "pis_after": 3,
+   "latin_reproduces_X": true,
+   "NEG_wrong_shift_reproduces_X": false,
+   "match": true
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "pis_before": 3,
+   "pis_after": 4,
+   "latin_reproduces_X": true,
+   "NEG_wrong_shift_reproduces_X": false,
+   "match": true
+  }
+ ],
+ "dao_piside": {
+  "stored_D_matches": true,
+  "D_in_Dao_class": true,
+  "Dinv_Pi_equals_Rinv_Pi_Linv": true,
+  "Dt_Pi_equals_Rt_Pi_Lt": true,
+  "Dinv_Pi_in_Mon": true,
+  "Dt_Pi_in_Mon": true,
+  "NEG_Pi_Dinv_in_Mon": false,
+  "NEG_Pi_Dt_in_Mon": false,
+  "recorded_Dinv_in_Mon_plain": false,
+  "recorded_Dt_in_Mon_plain": false,
+  "match": true
+ },
+ "slice_formula": [
+  {
+   "m": 2,
+   "formula_holds_all_slices": true,
+   "NEG_variant_R_a_fails": true,
+   "match": true
+  },
+  {
+   "m": 3,
+   "formula_holds_all_slices": true,
+   "NEG_variant_R_a_fails": true,
+   "match": true
+  },
+  {
+   "m": 4,
+   "formula_holds_all_slices": true,
+   "NEG_variant_R_a_fails": true,
+   "match": true
+  }
+ ],
+ "reconstructible": {
+  "bijective_family": [
+   {
+    "n1": 2,
+    "n2": 2,
+    "N": 4,
+    "rank": 16,
+    "full": 16,
+    "match": true
+   },
+   {
+    "n1": 2,
+    "n2": 3,
+    "N": 6,
+    "rank": 36,
+    "full": 36,
+    "match": true
+   },
+   {
+    "n1": 3,
+    "n2": 2,
+    "N": 6,
+    "rank": 36,
+    "full": 36,
+    "match": true
+   },
+   {
+    "n1": 3,
+    "n2": 3,
+    "N": 9,
+    "rank": 81,
+    "full": 81,
+    "match": true
+   }
+  ],
+  "NEG_common_spectrum_ee'=ff'": {
+   "params": "(e,f,e',f')=(2,3,3,2), n1=n2=2",
+   "rank": 8,
+   "full": 16,
+   "match": true
+  },
+  "trivial_A_eq_B_eq_I": {
+   "params": "A = B = I_4",
+   "rank": 0,
+   "match": true
+  }
+ },
+ "closed_algebras": {
+  "circulant": [
+   {
+    "n1": 2,
+    "n2": 3,
+    "coprime": true,
+    "NEG_plain_lexicographic_is_circulant": false,
+    "crt_reordered_is_circulant": true,
+    "match": true
+   },
+   {
+    "n1": 3,
+    "n2": 2,
+    "coprime": true,
+    "NEG_plain_lexicographic_is_circulant": false,
+    "crt_reordered_is_circulant": true,
+    "match": true
+   },
+   {
+    "n1": 3,
+    "n2": 4,
+    "coprime": true,
+    "NEG_plain_lexicographic_is_circulant": false,
+    "crt_reordered_is_circulant": true,
+    "match": true
+   },
+   {
+    "n1": 4,
+    "n2": 3,
+    "coprime": true,
+    "NEG_plain_lexicographic_is_circulant": false,
+    "crt_reordered_is_circulant": true,
+    "match": true
+   },
+   {
+    "n1": 2,
+    "n2": 2,
+    "coprime": false,
+    "NEG_plain_lexicographic_is_circulant": false,
+    "match": true
+   },
+   {
+    "n1": 2,
+    "n2": 4,
+    "coprime": false,
+    "NEG_plain_lexicographic_is_circulant": false,
+    "match": true
+   }
+  ],
+  "blockdiag": [
+   {
+    "sizes_A": [
+     2,
+     3
+    ],
+    "sizes_B": [
+     1,
+     2
+    ],
+    "reordered_contiguous_blocks": true,
+    "diagonal_blocks_equal_kron_Ai_Bj": true,
+    "NEG_plain_order_contiguous_blocks": false,
+    "match": true
+   },
+   {
+    "sizes_A": [
+     1,
+     1,
+     2
+    ],
+    "sizes_B": [
+     3,
+     2
+    ],
+    "reordered_contiguous_blocks": true,
+    "diagonal_blocks_equal_kron_Ai_Bj": true,
+    "NEG_plain_order_contiguous_blocks": false,
+    "match": true
+   }
+  ]
+ },
+ "all_match": true
+}

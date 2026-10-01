@@ -1,0 +1,51 @@
+{
+ "jacobian": [
+  {
+   "m": 2,
+   "dao_single": 12,
+   "mon_pred": 12,
+   "dao_product": 16,
+   "params": 32,
+   "dense": 16,
+   "four_m3_minus_3m2": 20
+  },
+  {
+   "m": 3,
+   "dao_single": 45,
+   "mon_pred": 45,
+   "dao_product": 81,
+   "params": 108,
+   "dense": 81,
+   "four_m3_minus_3m2": 81
+  },
+  {
+   "m": 4,
+   "dao_single": 112,
+   "mon_pred": 112,
+   "dao_product": 208,
+   "params": 256,
+   "dense": 256,
+   "four_m3_minus_3m2": 208
+  }
+ ],
+ "latin_square": [
+  {
+   "m": 3,
+   "max_abs_err": 0.0,
+   "ok": true
+  },
+  {
+   "m": 4,
+   "max_abs_err": 0.0,
+   "ok": true
+  }
+ ],
+ "dao_closure": [
+  {
+   "m": 3,
+   "member": 1,
+   "inverse": 3,
+   "transpose": 3
+  }
+ ]
+}

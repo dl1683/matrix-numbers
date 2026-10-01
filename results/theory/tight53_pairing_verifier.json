@@ -1,0 +1,14 @@
+{
+ "source": "verifier",
+ "covered_pairs": 457,
+ "keys": 16440,
+ "positive_control": [
+  true,
+  true,
+  true,
+  true,
+  true
+ ],
+ "partner_matches": 0,
+ "matches": []
+}

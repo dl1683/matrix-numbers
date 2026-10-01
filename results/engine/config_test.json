@@ -1,0 +1,84 @@
+{
+ "table": "results/engine/config_table.json",
+ "cases": [
+  {
+   "fam": "G",
+   "sigma_target": 9.094947017729282e-13,
+   "config": {
+    "N": 12,
+    "p": 41,
+    "sigma": 4.547473508865158e-13,
+    "table_k": 1024
+   },
+   "violations": 0,
+   "max_err_over_limit": 0.00984857811344058,
+   "p_used": 41
+  },
+  {
+   "fam": "G",
+   "sigma_target": 8.881784197001252e-16,
+   "config": {
+    "N": 15,
+    "p": 53,
+    "sigma": 1.1102230246251565e-16,
+    "table_k": 1024
+   },
+   "violations": 0,
+   "max_err_over_limit": 0.01168968797100781,
+   "p_used": 53
+  },
+  {
+   "fam": "X",
+   "sigma_target": 9.094947017729282e-13,
+   "config": {
+    "N": 12,
+    "p": 41,
+    "sigma": 4.547473508865158e-13,
+    "table_k": 1024
+   },
+   "violations": 0,
+   "max_err_over_limit": 0.002210170002701971,
+   "p_used": 41
+  },
+  {
+   "fam": "X",
+   "sigma_target": 8.881784197001252e-16,
+   "config": {
+    "N": 15,
+    "p": 53,
+    "sigma": 1.1102230246251565e-16,
+    "table_k": 1024
+   },
+   "violations": 0,
+   "max_err_over_limit": 0.0023497948090104998,
+   "p_used": 53
+  },
+  {
+   "fam": "W",
+   "sigma_target": 9.094947017729282e-13,
+   "config": {
+    "N": 12,
+    "p": 41,
+    "sigma": 4.547473508865158e-13,
+    "table_k": 1024
+   },
+   "violations": 0,
+   "max_err_over_limit": 0.003727045492091625,
+   "p_used": 41
+  },
+  {
+   "fam": "W",
+   "sigma_target": 8.881784197001252e-16,
+   "config": {
+    "N": 15,
+    "p": 53,
+    "sigma": 1.1102230246251565e-16,
+    "table_k": 1024
+   },
+   "violations": 0,
+   "max_err_over_limit": 0.0038988444310970047,
+   "p_used": 53
+  }
+ ],
+ "all_ok": true
+}

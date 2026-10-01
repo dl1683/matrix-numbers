@@ -1,0 +1,47 @@
+{
+ "INT8xINT8_6_w(1,29,37)": {
+  "matrix_identity": true,
+  "pairs_identity": true,
+  "|T_A|": 875,
+  "|T_B|": 875,
+  "coverage_A": 148,
+  "coverage_B": 148,
+  "target_A": 127,
+  "target_B": 127,
+  "covers": true,
+  "c_A_max_all_admissible": 12,
+  "c_B_max_all_admissible": 12,
+  "K_star_fp32_all_admissible": 116508,
+  "r": 6
+ },
+ "INT8xINT8_6_w(1,11,39)": {
+  "matrix_identity": true,
+  "pairs_identity": true,
+  "|T_A|": 875,
+  "|T_B|": 875,
+  "coverage_A": 134,
+  "coverage_B": 134,
+  "target_A": 127,
+  "target_B": 127,
+  "covers": true,
+  "c_A_max_all_admissible": 12,
+  "c_B_max_all_admissible": 12,
+  "K_star_fp32_all_admissible": 116508,
+  "r": 6
+ },
+ "INT4xINT8_4": {
+  "matrix_identity": true,
+  "pairs_identity": true,
+  "|T_A|": 61,
+  "|T_B|": 1083,
+  "coverage_A": 10,
+  "coverage_B": 154,
+  "target_A": 7,
+  "target_B": 127,
+  "covers": true,
+  "c_A_max_all_admissible": 12,
+  "c_B_max_all_admissible": 12,
+  "K_star_fp32_all_admissible": 116508,
+  "r": 4
+ }
+}

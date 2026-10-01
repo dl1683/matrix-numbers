@@ -1,0 +1,74 @@
+{
+ "toeplitz_rank_Ze_Zf": 2,
+ "product_rank_Ze_Zg": 4,
+ "inverse_rank_swapped_pair": 2,
+ "sum_rank_same_pair": 2,
+ "kron_toeplitz_kron_pair": [
+  {
+   "n1": 3,
+   "n2": 3,
+   "rank": 8,
+   "two_n1_plus_two_n2": 12,
+   "n1n2": 9
+  },
+  {
+   "n1": 3,
+   "n2": 4,
+   "rank": 10,
+   "two_n1_plus_two_n2": 14,
+   "n1n2": 12
+  },
+  {
+   "n1": 4,
+   "n2": 4,
+   "rank": 12,
+   "two_n1_plus_two_n2": 16,
+   "n1n2": 16
+  },
+  {
+   "n1": 4,
+   "n2": 5,
+   "rank": 14,
+   "two_n1_plus_two_n2": 18,
+   "n1n2": 20
+  },
+  {
+   "n1": 5,
+   "n2": 5,
+   "rank": 16,
+   "two_n1_plus_two_n2": 20,
+   "n1n2": 25
+  }
+ ],
+ "projector_commutator_rank": 3,
+ "projector_blocks_rank_sum": 3,
+ "qs_order_A_B_AB_A+B_Ainv": [
+  1,
+  1,
+  2,
+  2,
+  1
+ ],
+ "qs_kron_order_n1_n2_order": [
+  [
+   3,
+   3,
+   4
+  ],
+  [
+   4,
+   4,
+   5
+  ],
+  [
+   5,
+   5,
+   6
+  ],
+  [
+   6,
+   6,
+   7
+  ]
+ ]
+}

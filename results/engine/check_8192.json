@@ -1,0 +1,111 @@
+{
+ "G": {
+  "native": {
+   "E1": 4.392661604591666e-15,
+   "E2": 4.268661163721451e-16
+  },
+  "cert": {
+   "N": 16,
+   "p": 58,
+   "err": {
+    "E1": 2.7454135028697915e-17,
+    "E2": 2.8075648288116e-18
+   },
+   "matched": true,
+   "contract_tau_2^-52_met": true,
+   "worst_E_over_D": 7.688467116725547e-17,
+   "audit": {
+    "max_err_over_bound": 0.09423672514194502,
+    "violations": 0,
+    "median_bound_over_err": 108.6916760311711,
+    "max_err_over_D": 2.8075648288116e-18
+   }
+  },
+  "oracle": {
+   "N": 14,
+   "p": 50,
+   "err": {
+    "E1": 1.4482056227638151e-15,
+    "E2": 1.4376376048672928e-16
+   }
+  },
+  "graph_equals_eager": true,
+  "device_rule_equals_host_rule": true,
+  "device_rule": {
+   "N": 16,
+   "p": 58,
+   "preq": 57,
+   "host_preq": 57
+  },
+  "prof_s": {
+   "stats_gpu": 0.010965312004089355,
+   "stats+rule_wall": 0.10913360000995453,
+   "residues": 0.008089504241943359,
+   "gemm+reduce": 0.08814678192138672,
+   "recon": 0.004398015975952149
+  }
+ },
+ "W": {
+  "native": {
+   "E1": 4.042564943645902e-15,
+   "E2": 2.6342800596885994e-15
+  },
+  "cert": {
+   "N": 20,
+   "p": 74,
+   "err": {
+    "E1": 1.028077429109167e-21,
+    "E2": 4.966630580781178e-18
+   },
+   "matched": true,
+   "contract_tau_2^-52_met": true,
+   "worst_E_over_D": 5.981391135047107e-17,
+   "audit": {
+    "max_err_over_bound": 0.3215037093056501,
+    "violations": 0,
+    "median_bound_over_err": 29.661739166226745,
+    "max_err_over_D": 4.966630580781178e-18
+   }
+  },
+  "cert_no_inside": {
+   "N": 20,
+   "p": 74,
+   "err": {
+    "E1": 1.028077429109167e-21,
+    "E2": 4.966630580781178e-18
+   },
+   "matched": true,
+   "contract_tau_2^-52_met": true,
+   "worst_E_over_D": 7.87454341230591e-17,
+   "audit": {
+    "max_err_over_bound": 0.3218949749842557,
+    "violations": 0,
+    "median_bound_over_err": 29.251489239024572,
+    "max_err_over_D": 4.966630580781178e-18
+   }
+  },
+  "oracle": {
+   "N": 17,
+   "p": 62,
+   "err": {
+    "E1": 1.6844020598524592e-17,
+    "E2": 2.3230030735175646e-15
+   }
+  },
+  "graph_equals_eager": true,
+  "device_rule_equals_host_rule": true,
+  "device_rule": {
+   "N": 20,
+   "p": 74,
+   "preq": 73,
+   "host_preq": 73
+  },
+  "prof_s": {
+   "stats_gpu": 0.017365760803222656,
+   "stats+rule_wall": 0.18817500000295695,
+   "residues": 0.016031455993652344,
+   "gemm+reduce": 0.18607183837890626,
+   "recon": 0.011505760192871094
+  }
+ }
+}

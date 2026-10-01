@@ -1,0 +1,32 @@
+[
+ {
+  "shape": [
+   8,
+   256,
+   8
+  ],
+  "input_bits": 50,
+  "gemms": 32,
+  "exact_match": true
+ },
+ {
+  "shape": [
+   16,
+   1024,
+   16
+  ],
+  "input_bits": 48,
+  "gemms": 32,
+  "exact_match": true
+ },
+ {
+  "shape": [
+   8,
+   65536,
+   8
+  ],
+  "input_bits": 40,
+  "gemms": 32,
+  "exact_match": true
+ }
+]

@@ -1,0 +1,106 @@
+[
+ {
+  "control": "AWE6",
+  "lines": 180,
+  "planes": 180,
+  "equal": true,
+  "t_lines": 239.29,
+  "t_planes": 347.71
+ },
+ {
+  "K": 12,
+  "lines": 1716,
+  "planes": 1716,
+  "equal": true,
+  "t_lines": 0.48,
+  "t_planes": 0.27
+ },
+ {
+  "K": 127,
+  "lines": 0,
+  "planes": 0,
+  "equal": true,
+  "t_lines": 9.28,
+  "t_planes": 17.41
+ },
+ {
+  "K": 12,
+  "lines": 1719,
+  "planes": 1719,
+  "equal": true,
+  "t_lines": 0.44,
+  "t_planes": 0.26
+ },
+ {
+  "K": 127,
+  "lines": 0,
+  "planes": 0,
+  "equal": true,
+  "t_lines": 8.67,
+  "t_planes": 18.45
+ },
+ {
+  "K": 12,
+  "lines": 1554,
+  "planes": 1554,
+  "equal": true,
+  "t_lines": 0.52,
+  "t_planes": 0.27
+ },
+ {
+  "K": 127,
+  "lines": 0,
+  "planes": 0,
+  "equal": true,
+  "t_lines": 7.33,
+  "t_planes": 12.97
+ },
+ {
+  "K": 12,
+  "lines": 1719,
+  "planes": 1719,
+  "equal": true,
+  "t_lines": 0.39,
+  "t_planes": 0.22
+ },
+ {
+  "K": 127,
+  "lines": 0,
+  "planes": 0,
+  "equal": true,
+  "t_lines": 9.07,
+  "t_planes": 19.52
+ },
+ {
+  "K": 12,
+  "lines": 1404,
+  "planes": 1404,
+  "equal": true,
+  "t_lines": 0.38,
+  "t_planes": 0.22
+ },
+ {
+  "K": 127,
+  "lines": 0,
+  "planes": 0,
+  "equal": true,
+  "t_lines": 7.5,
+  "t_planes": 17.32
+ },
+ {
+  "K": 12,
+  "lines": 1061,
+  "planes": 1061,
+  "equal": true,
+  "t_lines": 0.42,
+  "t_planes": 0.21
+ },
+ {
+  "K": 127,
+  "lines": 0,
+  "planes": 0,
+  "equal": true,
+  "t_lines": 6.96,
+  "t_planes": 11.96
+ }
+]

@@ -1,0 +1,86 @@
+{
+ "A_AWE6_K127": {
+  "points": 875,
+  "seconds": 634.2,
+  "rational_total_up_to_sign": 3018,
+  "q_distribution": {
+   "1": 180,
+   "2": 2838
+  },
+  "q1_equals_stored_integer_set": true,
+  "stored_up_to_sign": 180,
+  "missing_vs_stored": [],
+  "extra_vs_stored": [],
+  "has_(1,29,37)": true,
+  "has_(1,11,39)": true,
+  "exact_recheck_failures": 0
+ },
+ "B_planted": [
+  {
+   "Q": 2,
+   "N": [
+    5,
+    13,
+    29
+   ],
+   "points": 548,
+   "seconds": 31.5,
+   "found_planted": true,
+   "returned_up_to_sign": 1,
+   "exact_recheck_failures": 0
+  },
+  {
+   "Q": 3,
+   "N": [
+    7,
+    11,
+    31
+   ],
+   "points": 548,
+   "seconds": 32.7,
+   "found_planted": true,
+   "returned_up_to_sign": 1,
+   "exact_recheck_failures": 0
+  },
+  {
+   "Q": 5,
+   "N": [
+    11,
+    17,
+    41
+   ],
+   "points": 544,
+   "seconds": 30.5,
+   "found_planted": true,
+   "returned_up_to_sign": 1,
+   "exact_recheck_failures": 0
+  },
+  {
+   "Q": 1,
+   "N": [
+    3,
+    19,
+    37
+   ],
+   "points": 544,
+   "seconds": 33.2,
+   "found_planted": true,
+   "returned_up_to_sign": 1,
+   "exact_recheck_failures": 0
+  },
+  {
+   "Q": 2,
+   "N": [
+    1,
+    9,
+    23
+   ],
+   "points": 550,
+   "seconds": 35.3,
+   "found_planted": true,
+   "returned_up_to_sign": 1,
+   "exact_recheck_failures": 0
+  }
+ ],
+ "verdict_pass": true
+}

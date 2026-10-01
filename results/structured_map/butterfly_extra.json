@@ -1,0 +1,38 @@
+[
+ {
+  "n": 32,
+  "L": 5,
+  "k": 1,
+  "params": 320,
+  "jac_rank_mod_p": 192,
+  "predicted": 192,
+  "match": true
+ },
+ {
+  "n": 32,
+  "L": 5,
+  "k": 2,
+  "params": 640,
+  "jac_rank_mod_p": 352,
+  "predicted": 352,
+  "match": true
+ },
+ {
+  "n": 32,
+  "L": 5,
+  "k": 6,
+  "params": 1920,
+  "jac_rank_mod_p": 992,
+  "predicted": 992,
+  "match": true
+ },
+ {
+  "n": 32,
+  "L": 5,
+  "k": 7,
+  "params": 2240,
+  "jac_rank_mod_p": 1024,
+  "predicted": 1024,
+  "match": true
+ }
+]

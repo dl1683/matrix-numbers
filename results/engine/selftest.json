@@ -1,0 +1,588 @@
+{
+ "cases": [
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "gauss",
+   "stats_ok": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "gauss",
+   "N": 8,
+   "p": 20,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "gauss",
+   "N": 8,
+   "p": 29,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "gauss",
+   "N": 14,
+   "p": 43,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "gauss",
+   "N": 14,
+   "p": 52,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "gauss",
+   "N": 20,
+   "p": 66,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "gauss",
+   "N": 20,
+   "p": 75,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "gauss",
+   "N": 30,
+   "p": 102,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "gauss",
+   "N": 30,
+   "p": 111,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "graded",
+   "stats_ok": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "graded",
+   "N": 8,
+   "p": 21,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "graded",
+   "N": 8,
+   "p": 30,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "graded",
+   "N": 14,
+   "p": 44,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "graded",
+   "N": 14,
+   "p": 53,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "graded",
+   "N": 20,
+   "p": 67,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "graded",
+   "N": 20,
+   "p": 76,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "graded",
+   "N": 30,
+   "p": 103,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "graded",
+   "N": 30,
+   "p": 112,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "wide",
+   "stats_ok": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "wide",
+   "N": 8,
+   "p": 21,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "wide",
+   "N": 8,
+   "p": 30,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "wide",
+   "N": 14,
+   "p": 45,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "wide",
+   "N": 14,
+   "p": 54,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "wide",
+   "N": 20,
+   "p": 67,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "wide",
+   "N": 20,
+   "p": 76,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "wide",
+   "N": 30,
+   "p": 103,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    64,
+    64,
+    64
+   ],
+   "kind": "wide",
+   "N": 30,
+   "p": 112,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "gauss",
+   "stats_ok": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "gauss",
+   "N": 8,
+   "p": 20,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "gauss",
+   "N": 8,
+   "p": 29,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "gauss",
+   "N": 14,
+   "p": 44,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "gauss",
+   "N": 14,
+   "p": 53,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "gauss",
+   "N": 20,
+   "p": 66,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "gauss",
+   "N": 20,
+   "p": 75,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "gauss",
+   "N": 30,
+   "p": 102,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "gauss",
+   "N": 30,
+   "p": 111,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "graded",
+   "stats_ok": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "graded",
+   "N": 8,
+   "p": 21,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "graded",
+   "N": 8,
+   "p": 30,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "graded",
+   "N": 14,
+   "p": 44,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "graded",
+   "N": 14,
+   "p": 53,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "graded",
+   "N": 20,
+   "p": 67,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "graded",
+   "N": 20,
+   "p": 76,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "graded",
+   "N": 30,
+   "p": 102,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "graded",
+   "N": 30,
+   "p": 111,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "wide",
+   "stats_ok": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "wide",
+   "N": 8,
+   "p": 21,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "wide",
+   "N": 8,
+   "p": 30,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "wide",
+   "N": 14,
+   "p": 45,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "wide",
+   "N": 14,
+   "p": 54,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "wide",
+   "N": 20,
+   "p": 67,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "wide",
+   "N": 20,
+   "p": 76,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "wide",
+   "N": 30,
+   "p": 103,
+   "exact_bitwise": true
+  },
+  {
+   "shape": [
+    32,
+    96,
+    64
+   ],
+   "kind": "wide",
+   "N": 30,
+   "p": 112,
+   "exact_bitwise": true
+  }
+ ],
+ "all_ok": true,
+ "graph_equals_eager": true
+}

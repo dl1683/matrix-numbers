@@ -1,0 +1,42 @@
+[
+ {
+  "k": 2,
+  "order_J": 1,
+  "order_IplusJ": 1,
+  "order_kron": 2,
+  "predicted": 2,
+  "match": true
+ },
+ {
+  "k": 3,
+  "order_J": 1,
+  "order_IplusJ": 1,
+  "order_kron": 3,
+  "predicted": 3,
+  "match": true
+ },
+ {
+  "k": 4,
+  "order_J": 1,
+  "order_IplusJ": 1,
+  "order_kron": 4,
+  "predicted": 4,
+  "match": true
+ },
+ {
+  "k": 5,
+  "order_J": 1,
+  "order_IplusJ": 1,
+  "order_kron": 5,
+  "predicted": 5,
+  "match": true
+ },
+ {
+  "k": 6,
+  "order_J": 1,
+  "order_IplusJ": 1,
+  "order_kron": 6,
+  "predicted": 6,
+  "match": true
+ }
+]

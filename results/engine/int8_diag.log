@@ -1,0 +1,7 @@
+datasheet INT8 dense TOPS at 1.515 GHz: 254.4
+  mma loop s8: 401.4 T-ops/s, 2696 ops/clk/SM, f_eff 1816 MHz
+  mma loop f16: 100.5 T-ops/s, 668 ops/clk/SM, f_eff 1835 MHz
+  mma loop e4m3: 201.0 T-ops/s, 1336 ops/clk/SM, f_eff 1835 MHz
+2048 {'exact_vs_int_mm': {'lt_best': True, 'gemmex': True, 'int_mm_colmajor': True}, 'lt_n_algos': 1, 'fp16_matmul': 27.5, 'bf16_matmul': 26.5, 'fp8_e4m3_scaled_mm': 42.9, 'int_mm_rowmajorB': 46.6, 'int_mm_colmajorB': 116.0, 'transpose_B_only': 127.9, 'lt_int8_best': 96.0, 'gemmex_int8': 102.7}
+4096 {'exact_vs_int_mm': {'lt_best': True, 'gemmex': True, 'int_mm_colmajor': True}, 'lt_n_algos': 1, 'fp16_matmul': 42.4, 'bf16_matmul': 39.1, 'fp8_e4m3_scaled_mm': 79.8, 'int_mm_rowmajorB': 43.4, 'int_mm_colmajorB': 140.0, 'transpose_B_only': 275.6, 'lt_int8_best': 140.6, 'gemmex_int8': 140.0}
+8192 {'exact_vs_int_mm': {'lt_best': True, 'gemmex': True, 'int_mm_colmajor': True}, 'lt_n_algos': 1, 'fp16_matmul': 29.4, 'bf16_matmul': 30.0, 'fp8_e4m3_scaled_mm': 51.7, 'int_mm_rowmajorB': 29.1, 'int_mm_colmajorB': 110.2, 'transpose_B_only': 466.2, 'lt_int8_best': 110.0, 'gemmex_int8': 110.9}

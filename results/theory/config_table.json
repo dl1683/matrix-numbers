@@ -1,0 +1,3319 @@
+{
+ "description": "engine-facing certified schemes: exact integer product of b-bit-magnitude integer matrices (after power-of-two row/column scaling and round-to-nearest truncation, the product error is <= 2^(1-b) (max_l|A_il| sum_l|B_lj| + (1+2^(1-b)) sum_l|A_il| max_l|B_lj|) componentwise - PROVED elementary bound; mapping a target error to b is the engine's contract)",
+ "unit": "digit_gemm_complexity_v1",
+ "rows": [
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 7,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251
+    ],
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "recon_macs_per_output": 4,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 1,
+    "gemms": 1,
+    "recon_read_bytes_per_output": 4,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 1,
+   "lower_bound_M4_injectivity": 1,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 0.015869140625,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 7,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251
+    ],
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "recon_macs_per_output": 4,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 1,
+    "gemms": 1,
+    "recon_read_bytes_per_output": 4,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 1,
+   "lower_bound_M4_injectivity": 1,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 0.015869140625,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 7,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251
+    ],
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "recon_macs_per_output": 4,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 1,
+    "gemms": 1,
+    "recon_read_bytes_per_output": 4,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 1,
+   "lower_bound_M4_injectivity": 1,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 0.015869140625,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 7,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251
+    ],
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "recon_macs_per_output": 4,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 1,
+    "gemms": 1,
+    "recon_read_bytes_per_output": 4,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 1,
+   "lower_bound_M4_injectivity": 1,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 0.015869140625,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 7,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247
+    ],
+    "gemms": 5,
+    "recon_read_bytes_per_output": 20,
+    "recon_macs_per_output": 5,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 1,
+    "gemms": 1,
+    "recon_read_bytes_per_output": 4,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 1,
+   "lower_bound_M4_injectivity": 1,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 0.015869140625,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 8,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251
+    ],
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "recon_macs_per_output": 4,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 0.00787353515625,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 8,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251
+    ],
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "recon_macs_per_output": 4,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 0.00787353515625,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 8,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251
+    ],
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "recon_macs_per_output": 4,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 0.00787353515625,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 8,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247
+    ],
+    "gemms": 5,
+    "recon_read_bytes_per_output": 20,
+    "recon_macs_per_output": 5,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 0.00787353515625,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 8,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247
+    ],
+    "gemms": 5,
+    "recon_read_bytes_per_output": 20,
+    "recon_macs_per_output": 5,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 0.00787353515625,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 12,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247
+    ],
+    "gemms": 5,
+    "recon_read_bytes_per_output": 20,
+    "recon_macs_per_output": 5,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 0.0004885196685791016,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 12,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247
+    ],
+    "gemms": 5,
+    "recon_read_bytes_per_output": 20,
+    "recon_macs_per_output": 5,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 0.0004885196685791016,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 12,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251,
+     247
+    ],
+    "gemms": 5,
+    "recon_read_bytes_per_output": 20,
+    "recon_macs_per_output": 5,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 0.0004885196685791016,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 12,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251,
+     247,
+     241
+    ],
+    "gemms": 6,
+    "recon_read_bytes_per_output": 24,
+    "recon_macs_per_output": 6,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 0.0004885196685791016,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 12,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251,
+     247,
+     241
+    ],
+    "gemms": 6,
+    "recon_read_bytes_per_output": 24,
+    "recon_macs_per_output": 6,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 0.0004885196685791016,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 15,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251,
+     247,
+     241
+    ],
+    "gemms": 6,
+    "recon_read_bytes_per_output": 24,
+    "recon_macs_per_output": 6,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 6.103888154029846e-05,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 15,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251,
+     247,
+     241
+    ],
+    "gemms": 6,
+    "recon_read_bytes_per_output": 24,
+    "recon_macs_per_output": 6,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 6.103888154029846e-05,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 15,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251,
+     247,
+     241
+    ],
+    "gemms": 6,
+    "recon_read_bytes_per_output": 24,
+    "recon_macs_per_output": 6,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 6.103888154029846e-05,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 15,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251,
+     247,
+     241
+    ],
+    "gemms": 6,
+    "recon_read_bytes_per_output": 24,
+    "recon_macs_per_output": 6,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 6.103888154029846e-05,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 15,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241
+    ],
+    "gemms": 7,
+    "recon_read_bytes_per_output": 28,
+    "recon_macs_per_output": 7,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 2,
+    "gemms": 4,
+    "recon_read_bytes_per_output": 16,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 3,
+   "lower_bound_M4_injectivity": 2,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "digits_schoolbook",
+   "error_bound_factor": 6.103888154029846e-05,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 16,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251,
+     247,
+     241
+    ],
+    "gemms": 6,
+    "recon_read_bytes_per_output": 24,
+    "recon_macs_per_output": 6,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 3,
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 5,
+   "lower_bound_M4_injectivity": 3,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 3.0518509447574615e-05,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 16,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251,
+     247,
+     241
+    ],
+    "gemms": 6,
+    "recon_read_bytes_per_output": 24,
+    "recon_macs_per_output": 6,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 3,
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 5,
+   "lower_bound_M4_injectivity": 3,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 3.0518509447574615e-05,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 16,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     255,
+     253,
+     251,
+     247,
+     241
+    ],
+    "gemms": 6,
+    "recon_read_bytes_per_output": 24,
+    "recon_macs_per_output": 6,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 3,
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 5,
+   "lower_bound_M4_injectivity": 3,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 3.0518509447574615e-05,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 16,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241
+    ],
+    "gemms": 7,
+    "recon_read_bytes_per_output": 28,
+    "recon_macs_per_output": 7,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 3,
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 5,
+   "lower_bound_M4_injectivity": 3,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 3.0518509447574615e-05,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 16,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241
+    ],
+    "gemms": 7,
+    "recon_read_bytes_per_output": 28,
+    "recon_macs_per_output": 7,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 3,
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 5,
+   "lower_bound_M4_injectivity": 3,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 3.0518509447574615e-05,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 20,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241
+    ],
+    "gemms": 7,
+    "recon_read_bytes_per_output": 28,
+    "recon_macs_per_output": 7,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 3,
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 5,
+   "lower_bound_M4_injectivity": 3,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.907352270791307e-06,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 20,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241
+    ],
+    "gemms": 7,
+    "recon_read_bytes_per_output": 28,
+    "recon_macs_per_output": 7,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 3,
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 5,
+   "lower_bound_M4_injectivity": 3,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.907352270791307e-06,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 20,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241
+    ],
+    "gemms": 7,
+    "recon_read_bytes_per_output": 28,
+    "recon_macs_per_output": 7,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 3,
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 5,
+   "lower_bound_M4_injectivity": 3,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.907352270791307e-06,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 20,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239
+    ],
+    "gemms": 8,
+    "recon_read_bytes_per_output": 32,
+    "recon_macs_per_output": 8,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 3,
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 5,
+   "lower_bound_M4_injectivity": 3,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.907352270791307e-06,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 20,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239
+    ],
+    "gemms": 8,
+    "recon_read_bytes_per_output": 32,
+    "recon_macs_per_output": 8,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 3,
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 5,
+   "lower_bound_M4_injectivity": 3,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.907352270791307e-06,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 24,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239
+    ],
+    "gemms": 8,
+    "recon_read_bytes_per_output": 32,
+    "recon_macs_per_output": 8,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.1920930376163597e-07,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 24,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239
+    ],
+    "gemms": 8,
+    "recon_read_bytes_per_output": 32,
+    "recon_macs_per_output": 8,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.1920930376163597e-07,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 24,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239
+    ],
+    "gemms": 8,
+    "recon_read_bytes_per_output": 32,
+    "recon_macs_per_output": 8,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.1920930376163597e-07,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 24,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233
+    ],
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "recon_macs_per_output": 9,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.1920930376163597e-07,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 24,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233
+    ],
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "recon_macs_per_output": 9,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.1920930376163597e-07,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 27,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233
+    ],
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "recon_macs_per_output": 9,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.490116141589226e-08,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 27,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233
+    ],
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "recon_macs_per_output": 9,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.490116141589226e-08,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 27,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233
+    ],
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "recon_macs_per_output": 9,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.490116141589226e-08,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 27,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233
+    ],
+    "gemms": 9,
+    "recon_read_bytes_per_output": 36,
+    "recon_macs_per_output": 9,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.490116141589226e-08,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 27,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229
+    ],
+    "gemms": 10,
+    "recon_read_bytes_per_output": 40,
+    "recon_macs_per_output": 10,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.490116141589226e-08,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 31,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229
+    ],
+    "gemms": 10,
+    "recon_read_bytes_per_output": 40,
+    "recon_macs_per_output": 10,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 9.313225754828403e-10,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 31,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229
+    ],
+    "gemms": 10,
+    "recon_read_bytes_per_output": 40,
+    "recon_macs_per_output": 10,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 9.313225754828403e-10,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 31,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229
+    ],
+    "gemms": 10,
+    "recon_read_bytes_per_output": 40,
+    "recon_macs_per_output": 10,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 9.313225754828403e-10,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 31,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229
+    ],
+    "gemms": 10,
+    "recon_read_bytes_per_output": 40,
+    "recon_macs_per_output": 10,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 9.313225754828403e-10,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 31,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229,
+     227
+    ],
+    "gemms": 11,
+    "recon_read_bytes_per_output": 44,
+    "recon_macs_per_output": 11,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 4,
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 7,
+   "lower_bound_M4_injectivity": 4,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 9.313225754828403e-10,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 32,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229
+    ],
+    "gemms": 10,
+    "recon_read_bytes_per_output": 40,
+    "recon_macs_per_output": 10,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 5,
+    "gemms": 25,
+    "recon_read_bytes_per_output": 100,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 9,
+   "lower_bound_M4_injectivity": 5,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 4.656612875245797e-10,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 32,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229
+    ],
+    "gemms": 10,
+    "recon_read_bytes_per_output": 40,
+    "recon_macs_per_output": 10,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 5,
+    "gemms": 25,
+    "recon_read_bytes_per_output": 100,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 9,
+   "lower_bound_M4_injectivity": 5,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 4.656612875245797e-10,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 32,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229
+    ],
+    "gemms": 10,
+    "recon_read_bytes_per_output": 40,
+    "recon_macs_per_output": 10,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 5,
+    "gemms": 25,
+    "recon_read_bytes_per_output": 100,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 9,
+   "lower_bound_M4_injectivity": 5,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 4.656612875245797e-10,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 32,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229,
+     227
+    ],
+    "gemms": 11,
+    "recon_read_bytes_per_output": 44,
+    "recon_macs_per_output": 11,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 5,
+    "gemms": 25,
+    "recon_read_bytes_per_output": 100,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 9,
+   "lower_bound_M4_injectivity": 5,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 4.656612875245797e-10,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 32,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229,
+     227
+    ],
+    "gemms": 11,
+    "recon_read_bytes_per_output": 44,
+    "recon_macs_per_output": 11,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 5,
+    "gemms": 25,
+    "recon_read_bytes_per_output": 100,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 9,
+   "lower_bound_M4_injectivity": 5,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 4.656612875245797e-10,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 40,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229,
+     227,
+     223
+    ],
+    "gemms": 12,
+    "recon_read_bytes_per_output": 48,
+    "recon_macs_per_output": 12,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 6,
+    "gemms": 36,
+    "recon_read_bytes_per_output": 144,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 11,
+   "lower_bound_M4_injectivity": 6,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.818989403549165e-12,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 40,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229,
+     227,
+     223
+    ],
+    "gemms": 12,
+    "recon_read_bytes_per_output": 48,
+    "recon_macs_per_output": 12,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 6,
+    "gemms": 36,
+    "recon_read_bytes_per_output": 144,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 11,
+   "lower_bound_M4_injectivity": 6,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.818989403549165e-12,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 40,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229,
+     227,
+     223,
+     211
+    ],
+    "gemms": 13,
+    "recon_read_bytes_per_output": 52,
+    "recon_macs_per_output": 13,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 6,
+    "gemms": 36,
+    "recon_read_bytes_per_output": 144,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 11,
+   "lower_bound_M4_injectivity": 6,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.818989403549165e-12,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 40,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229,
+     227,
+     223,
+     211
+    ],
+    "gemms": 13,
+    "recon_read_bytes_per_output": 52,
+    "recon_macs_per_output": 13,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 6,
+    "gemms": 36,
+    "recon_read_bytes_per_output": 144,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 11,
+   "lower_bound_M4_injectivity": 6,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.818989403549165e-12,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 40,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229,
+     227,
+     223,
+     211
+    ],
+    "gemms": 13,
+    "recon_read_bytes_per_output": 52,
+    "recon_macs_per_output": 13,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 6,
+    "gemms": 36,
+    "recon_read_bytes_per_output": 144,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 11,
+   "lower_bound_M4_injectivity": 6,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.818989403549165e-12,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 48,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     203,
+     199
+    ],
+    "gemms": 14,
+    "recon_read_bytes_per_output": 56,
+    "recon_macs_per_output": 14,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 7,
+    "gemms": 49,
+    "recon_read_bytes_per_output": 196,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 13,
+   "lower_bound_M4_injectivity": 7,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 7.105427357601052e-15,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 48,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     245,
+     241,
+     239,
+     233,
+     229,
+     227,
+     223,
+     199,
+     197
+    ],
+    "gemms": 14,
+    "recon_read_bytes_per_output": 56,
+    "recon_macs_per_output": 14,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 7,
+    "gemms": 49,
+    "recon_read_bytes_per_output": 196,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 13,
+   "lower_bound_M4_injectivity": 7,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 7.105427357601052e-15,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 48,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199
+    ],
+    "gemms": 15,
+    "recon_read_bytes_per_output": 60,
+    "recon_macs_per_output": 15,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 7,
+    "gemms": 49,
+    "recon_read_bytes_per_output": 196,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 13,
+   "lower_bound_M4_injectivity": 7,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 7.105427357601052e-15,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 48,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199
+    ],
+    "gemms": 15,
+    "recon_read_bytes_per_output": 60,
+    "recon_macs_per_output": 15,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 7,
+    "gemms": 49,
+    "recon_read_bytes_per_output": 196,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 13,
+   "lower_bound_M4_injectivity": 7,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 7.105427357601052e-15,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 48,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199
+    ],
+    "gemms": 15,
+    "recon_read_bytes_per_output": 60,
+    "recon_macs_per_output": 15,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 7,
+    "gemms": 49,
+    "recon_read_bytes_per_output": 196,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 13,
+   "lower_bound_M4_injectivity": 7,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 7.105427357601052e-15,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 53,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199
+    ],
+    "gemms": 15,
+    "recon_read_bytes_per_output": 60,
+    "recon_macs_per_output": 15,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 7,
+    "gemms": 49,
+    "recon_read_bytes_per_output": 196,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 13,
+   "lower_bound_M4_injectivity": 7,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 2.2204460492503136e-16,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 53,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197
+    ],
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "recon_macs_per_output": 16,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 7,
+    "gemms": 49,
+    "recon_read_bytes_per_output": 196,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 13,
+   "lower_bound_M4_injectivity": 7,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 2.2204460492503136e-16,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 53,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197
+    ],
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "recon_macs_per_output": 16,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 7,
+    "gemms": 49,
+    "recon_read_bytes_per_output": 196,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 13,
+   "lower_bound_M4_injectivity": 7,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 2.2204460492503136e-16,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 53,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197
+    ],
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "recon_macs_per_output": 16,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 7,
+    "gemms": 49,
+    "recon_read_bytes_per_output": 196,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 13,
+   "lower_bound_M4_injectivity": 7,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 2.2204460492503136e-16,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 53,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197
+    ],
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "recon_macs_per_output": 16,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 7,
+    "gemms": 49,
+    "recon_read_bytes_per_output": 196,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 13,
+   "lower_bound_M4_injectivity": 7,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 2.2204460492503136e-16,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 56,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197
+    ],
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "recon_macs_per_output": 16,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 8,
+    "gemms": 64,
+    "recon_read_bytes_per_output": 256,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 15,
+   "lower_bound_M4_injectivity": 8,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 2.7755575615628914e-17,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 56,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197
+    ],
+    "gemms": 16,
+    "recon_read_bytes_per_output": 64,
+    "recon_macs_per_output": 16,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 8,
+    "gemms": 64,
+    "recon_read_bytes_per_output": 256,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 15,
+   "lower_bound_M4_injectivity": 8,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 2.7755575615628914e-17,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 56,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197,
+     193
+    ],
+    "gemms": 17,
+    "recon_read_bytes_per_output": 68,
+    "recon_macs_per_output": 17,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 8,
+    "gemms": 64,
+    "recon_read_bytes_per_output": 256,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 15,
+   "lower_bound_M4_injectivity": 8,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 2.7755575615628914e-17,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 56,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197,
+     193
+    ],
+    "gemms": 17,
+    "recon_read_bytes_per_output": 68,
+    "recon_macs_per_output": 17,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 8,
+    "gemms": 64,
+    "recon_read_bytes_per_output": 256,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 15,
+   "lower_bound_M4_injectivity": 8,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 2.7755575615628914e-17,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 56,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197,
+     193
+    ],
+    "gemms": 17,
+    "recon_read_bytes_per_output": 68,
+    "recon_macs_per_output": 17,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 8,
+    "gemms": 64,
+    "recon_read_bytes_per_output": 256,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 15,
+   "lower_bound_M4_injectivity": 8,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 2.7755575615628914e-17,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 60,
+   "k_max": 1024,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197,
+     193
+    ],
+    "gemms": 17,
+    "recon_read_bytes_per_output": 68,
+    "recon_macs_per_output": 17,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 8,
+    "gemms": 64,
+    "recon_read_bytes_per_output": 256,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 15,
+   "lower_bound_M4_injectivity": 8,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.734723475976807e-18,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 60,
+   "k_max": 4096,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197,
+     193
+    ],
+    "gemms": 17,
+    "recon_read_bytes_per_output": 68,
+    "recon_macs_per_output": 17,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 8,
+    "gemms": 64,
+    "recon_read_bytes_per_output": 256,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 15,
+   "lower_bound_M4_injectivity": 8,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.734723475976807e-18,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 60,
+   "k_max": 16384,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197,
+     193,
+     191
+    ],
+    "gemms": 18,
+    "recon_read_bytes_per_output": 72,
+    "recon_macs_per_output": 18,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 8,
+    "gemms": 64,
+    "recon_read_bytes_per_output": 256,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 15,
+   "lower_bound_M4_injectivity": 8,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.734723475976807e-18,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 60,
+   "k_max": 65536,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197,
+     193,
+     191
+    ],
+    "gemms": 18,
+    "recon_read_bytes_per_output": 72,
+    "recon_macs_per_output": 18,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 8,
+    "gemms": 64,
+    "recon_read_bytes_per_output": 256,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 15,
+   "lower_bound_M4_injectivity": 8,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.734723475976807e-18,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  },
+  {
+   "value_set": "INT8[-128,127]",
+   "bits_b": 60,
+   "k_max": 131071,
+   "crt": {
+    "moduli": [
+     256,
+     253,
+     251,
+     249,
+     247,
+     241,
+     239,
+     235,
+     233,
+     229,
+     227,
+     223,
+     217,
+     211,
+     199,
+     197,
+     193,
+     191
+    ],
+    "gemms": 18,
+    "recon_read_bytes_per_output": 72,
+    "recon_macs_per_output": 18,
+    "exact_if": "k*128^2 < 2^31 and prod(moduli) > 2k(2^b-1)^2",
+    "rigor": "PROVED exact (CRT + INT32 bound); count optimal among 1-GEMM-per-modulus CRT (MILP, exact product re-verified)"
+   },
+   "digits_schoolbook": {
+    "limbs": 8,
+    "gemms": 64,
+    "recon_read_bytes_per_output": 256,
+    "exact_if": "k*128^2 < 2^31",
+    "rigor": "PROVED exact"
+   },
+   "lower_bound_M1_M2prime": 15,
+   "lower_bound_M4_injectivity": 8,
+   "lower_bound_rigor": "Theorem 2 (PROVED-pending-gate)",
+   "recommended": "crt",
+   "error_bound_factor": 1.734723475976807e-18,
+   "error_bound_meaning": "|C^-C|_ij <= error_bound_factor * (max_l|A_il| sum_l|B_lj| + sum_l|A_il| max_l|B_lj|) after power-of-two row/column scaling and round-to-nearest to |x| <= 2^b - 1 (PROVED, elementary)"
+  }
+ ],
+ "fp8_fp4_fp64_level": [
+  {
+   "value_set": "FP8_E4M3_16",
+   "target": "P_gt_2^111",
+   "moduli": [
+    769,
+    767,
+    751,
+    749,
+    733,
+    719,
+    709,
+    701,
+    33,
+    32,
+    31,
+    29,
+    25,
+    23,
+    19,
+    17
+   ],
+   "gemms": 32,
+   "gemm_inner_dim_multiple": 1,
+   "recon_read_bytes_per_output": 128,
+   "crt_terms": 16,
+   "exact_if": [
+    "k * max|A_int| * max|B_int| < P/2 (CRT uniqueness)",
+    "FP32 accumulation exact while k <= 65536"
+   ],
+   "per_modulus": [
+    {
+     "m": 769,
+     "products": 3,
+     "weight_s": 47,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 16
+    },
+    {
+     "m": 767,
+     "products": 3,
+     "weight_s": 47,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 16
+    },
+    {
+     "m": 751,
+     "products": 3,
+     "weight_s": 46,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 16
+    },
+    {
+     "m": 749,
+     "products": 3,
+     "weight_s": 46,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 16
+    },
+    {
+     "m": 733,
+     "products": 3,
+     "weight_s": 45,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 16
+    },
+    {
+     "m": 719,
+     "products": 3,
+     "weight_s": 44,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 16
+    },
+    {
+     "m": 709,
+     "products": 3,
+     "weight_s": 53,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 16
+    },
+    {
+     "m": 701,
+     "products": 3,
+     "weight_s": 43,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 16
+    },
+    {
+     "m": 33,
+     "products": 1,
+     "planes": [
+      "P"
+     ],
+     "recon": "P*Q",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 16
+    },
+    {
+     "m": 32,
+     "products": 1,
+     "planes": [
+      "P"
+     ],
+     "recon": "P*Q",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 16
+    },
+    {
+     "m": 31,
+     "products": 1,
+     "planes": [
+      "P"
+     ],
+     "recon": "P*Q",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 15
+    },
+    {
+     "m": 29,
+     "products": 1,
+     "planes": [
+      "P"
+     ],
+     "recon": "P*Q",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 14
+    },
+    {
+     "m": 25,
+     "products": 1,
+     "planes": [
+      "P"
+     ],
+     "recon": "P*Q",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 23,
+     "products": 1,
+     "planes": [
+      "P"
+     ],
+     "recon": "P*Q",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 11
+    },
+    {
+     "m": 19,
+     "products": 1,
+     "planes": [
+      "P"
+     ],
+     "recon": "P*Q",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 9
+    },
+    {
+     "m": 17,
+     "products": 1,
+     "planes": [
+      "P"
+     ],
+     "recon": "P*Q",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 8
+    }
+   ],
+   "rigor": "PROVED exact (per-modulus identities checked over all residue pairs; CRT); count optimal only within the declared candidate family (1-product moduli where V covers Z/m, 3-product 2-limb Karatsuba moduli) by MILP",
+   "published_best": "36 FP8 GEMMs (3N, N=12; arXiv 2603.10634 fast mode) for pure FP8. Ozaki 2.5 (arXiv 2609.09095) reports fewer GEMMs only by storing byte residues as INT8 operands (mixed-format/INT8 schemes).",
+   "scope": "pure-FP8 hardware (no INT8 unit); where INT8 exists use the INT8 CRT rows (15-16 GEMMs at FP64 level)"
+  },
+  {
+   "value_set": "FP4_E2M1x2",
+   "target": "width54_exact_K16384",
+   "moduli": [
+    89,
+    85,
+    83,
+    81,
+    79,
+    73,
+    71,
+    67,
+    64,
+    61,
+    59,
+    53,
+    49,
+    47,
+    43,
+    41,
+    37,
+    31,
+    29,
+    23,
+    13,
+    11
+   ],
+   "gemms": 62,
+   "gemm_inner_dim_multiple": 1,
+   "recon_read_bytes_per_output": 248,
+   "crt_terms": 22,
+   "exact_if": [
+    "k * max|A_int| * max|B_int| < P/2 (CRT uniqueness)",
+    "FP32 accumulation exact while k <= 116508"
+   ],
+   "per_modulus": [
+    {
+     "m": 89,
+     "products": 3,
+     "weight_s": 14,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 85,
+     "products": 3,
+     "weight_s": 9,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 83,
+     "products": 3,
+     "weight_s": 8,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 81,
+     "products": 3,
+     "weight_s": 9,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 79,
+     "products": 3,
+     "weight_s": 9,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 73,
+     "products": 3,
+     "weight_s": 6,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 71,
+     "products": 3,
+     "weight_s": 6,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 67,
+     "products": 3,
+     "weight_s": 6,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 64,
+     "products": 3,
+     "weight_s": 8,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 8
+    },
+    {
+     "m": 61,
+     "products": 3,
+     "weight_s": 5,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 59,
+     "products": 3,
+     "weight_s": 5,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 53,
+     "products": 3,
+     "weight_s": 5,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 49,
+     "products": 3,
+     "weight_s": 4,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 47,
+     "products": 3,
+     "weight_s": 4,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 43,
+     "products": 3,
+     "weight_s": 4,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 41,
+     "products": 3,
+     "weight_s": 3,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 37,
+     "products": 3,
+     "weight_s": 3,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 31,
+     "products": 3,
+     "weight_s": 2,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 29,
+     "products": 3,
+     "weight_s": 2,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 23,
+     "products": 3,
+     "weight_s": 2,
+     "planes": [
+      "a0",
+      "a1",
+      "a0+a1"
+     ],
+     "recon": "(1-s)*G(a0,b0) + s*G(a0+a1,b0+b1) + (s^2-s)*G(a1,b1)  (mod m)",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 12
+    },
+    {
+     "m": 13,
+     "products": 1,
+     "planes": [
+      "P"
+     ],
+     "recon": "P*Q",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 8
+    },
+    {
+     "m": 11,
+     "products": 1,
+     "planes": [
+      "P"
+     ],
+     "recon": "P*Q",
+     "exact_check_all_pairs": true,
+     "max_abs_plane": 6
+    }
+   ],
+   "rigor": "PROVED exact (per-modulus identities checked over all residue pairs; CRT); count optimal only within the declared candidate family (1-product moduli where V covers Z/m, 3-product 2-limb Karatsuba moduli) by MILP",
+   "published_best": "59 (AWE arXiv 2609.24519)"
+  }
+ ]
+}
