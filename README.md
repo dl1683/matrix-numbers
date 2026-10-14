@@ -1,3 +1,12 @@
+> **Research moved to [Latent Space Reasoning](https://github.com/dl1683/Latent-Space-Reasoning).**
+> All future work from this project continues in LSR, alongside persistent latent
+> memory, long-context computation, new model construction/training/inference,
+> and shared high-dimensional and neural mathematics. This repository preserves
+> historical research; its old run/resume instructions are historical, not a
+> current launch queue. Start with [LSR's current state](https://github.com/dl1683/Latent-Space-Reasoning/blob/main/STATE.md)
+> and [unified evidence](https://github.com/dl1683/Latent-Space-Reasoning/blob/main/docs/UNIFIED_EVIDENCE.md).
+> Consolidation does not expand the scientific scope of the results below.
+
 # Matrix Numbers: arithmetic with the matrix as the atom
 
 **What if the matrix, not the number, were the atom of arithmetic?**
@@ -85,3 +94,4 @@ Negative and inconclusive results are kept (the 2048 cells, the 8192 cells exclu
 
 ## License
 MIT, see [LICENSE](LICENSE).
+
